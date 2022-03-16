@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Cartlow/IdeaProjects/Buyback_Trade_in/src">
+        <classes>
+            <class name="Modules.Process">
+                <methods>
+                    <include name="Select_Mobile_Category"/>
+                    <include name="Mobile_brand_click"/>
+                    <include name="select_Mobile_brand"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
