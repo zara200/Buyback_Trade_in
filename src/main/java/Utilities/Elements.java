@@ -4,7 +4,9 @@ public class Elements {
     public String cross_button="//*[@id=\"app-modal\"]/div/div/div[1]/button/span";
     public String Mobile="//button[contains ( text(), 'Mobiles')]";
     public String brand="//select[@id=\"brand\"]";
+    public String select_brand="//select[@id=\"brand\"]/option";
     public String device="//select[@id=\"device\"]";
+    public String select_device="//select[@id=\"device\"]/option";
     public String sign_in="/html/body/div[1]/div[5]/div[2]/div/aside/div/a";
     public String email="//input[@name=\"email\"]";
     public String password="//input[@name=\"password\"]";

@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+import java.util.Random;
+
 public class Process extends Base {
     Elements e = new Elements();
 
@@ -33,9 +36,12 @@ public class Process extends Base {
 
     @Test(priority = 3)
     public void select_Mobile_brand() throws InterruptedException {
-        Thread.sleep(1500);
-        Select select_brand = new Select(driver.findElement(By.xpath(e.brand)));
-        select_brand.selectByIndex(2);
+            Thread.sleep(1500);
+            List<WebElement> options = driver.findElements(By.xpath(e.select_brand));
+            Random random = new Random();
+            int list= random.nextInt(options.size());
+            System.out.println(list);
+            options.get(list).click();
     }
 
     @Test(priority = 4)
@@ -50,8 +56,11 @@ public class Process extends Base {
     @Test(priority = 5)
     public void select_device_dropdown() throws InterruptedException {
         Thread.sleep(1500);
-        Select select_device = new Select(driver.findElement(By.xpath(e.device)));
-        select_device.selectByIndex(4);
+        List<WebElement> options = driver.findElements(By.xpath(e.select_device));
+        Random random = new Random();
+        int list= random.nextInt(options.size());
+        System.out.println(list);
+        options.get(list).click();
 }
     @Test(priority = 6)
     public void Sign_in() throws InterruptedException {
